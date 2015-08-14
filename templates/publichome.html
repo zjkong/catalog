@@ -1,0 +1,63 @@
+<html>
+	<head>
+
+		<!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+		<link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'style.css')}}">
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+		<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+
+		<!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+	</head>
+	<body>
+
+	<div class = 'heading'>
+		<table>
+			<tr>
+				<td class = 'title'><h1>Catalog App</h1></div></td>
+
+				<td class = 'login'>
+					<a href = '{{url_for('login')}}'>
+					<div id = 'button1'>
+						<h3>Login</h3>
+					</div>
+					</a>
+        		</td>
+
+			</tr>
+		</table>
+	</div>
+
+	<div class = 'space'>
+	</div>
+
+	<div class = 'body'>
+		<table class = 'content'>
+			<tr>
+				<td class = 'left'>
+					<div class = 'leftTop'>
+						<span class = 'caption'>Categories</span>
+							<br>
+							{% for i in sports %} 
+							<a href = '{{url_for('equipmentforonesports', sports_id = i.id)}}'><span id ='sports'>{{i.name}}</span></a>
+							<br>
+							{% endfor %}
+					</div>			
+				</td>
+
+				<td class = 'right'>
+					<div id = 'top'>
+						<span class = 'caption'>Latest Items</span>
+							<br>		
+							{% for i in equipment %}							
+							<a href = '{{url_for('equipmentdetails', sports_id = i.sports.id, equipment_id = i.id)}}'><span id ='equipments'>{{i.name}}</span><span id = 'belong'>{{ '(' + i.sports.name + ')'}}</span></a>
+							<br>							
+					{% endfor %}
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	</body>
+</html>

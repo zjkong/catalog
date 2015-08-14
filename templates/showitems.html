@@ -1,0 +1,86 @@
+<html>
+	<head>
+
+		<!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+		<link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'style.css')}}">
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+		<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+
+		<!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+	</head>
+	<body>
+	
+	<div class = 'heading'>
+		<table>
+			<tr>
+				<td class = 'title'><h1>Catalog App</h1></div></td>
+
+				<td class = 'logout'>
+					<button onclick = "signOut()" id = 'button2'><span id = 'text'>Logout</span></button>
+        		</td>
+
+			</tr>
+		</table>
+	</div>
+
+	<div class = 'space'>
+	</div>
+
+	<div class = 'body'>
+		<table class = 'content'>
+			<tr>
+				<td class = 'left'>
+					<div class = 'leftTop'>
+						<a href = '{{url_for('addsports')}}'>Add Sports</a>
+						<br>
+						<span class = 'caption'>Categories</span>
+							<br>
+							{% for i in sports %} 
+							<a href = '{{url_for('equipmentforonesports', sports_id = i.id)}}'><span id ='sports'>{{i.name}}</span></a>
+							<br>
+							{% endfor %}
+					</div>			
+				</td>
+
+				<td class = 'right'>
+					<div id = 'top'>
+						<span class = 'caption'>Latest Items</span>
+							<br>		
+							{% for i in equipment %}							
+							<a href = '{{url_for('equipmentdetails', sports_id = i.sports.id, equipment_id = i.id)}}'><span id ='equipments'>{{i.name}}</span><span id = 'belong'>{{ '(' + i.sports.name + ')'}}</span></a>
+							<br>							
+					{% endfor %}
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<script>
+	function signOut() {
+	    $.ajax({
+	      type: 'POST',
+	      url: '/gdisconnect',
+	      processData: false,
+	      success: function(result) {
+	        // Handle or verify the server response if necessary.
+	        if (result) {
+	          $('#result').html('Logout Successful!</br>'+ result + '</br>Redirecting...')
+	         setTimeout(function() {
+	          window.location.href = "/itemcatalog";
+	         }, 2000);
+	          
+	      } else if (authResult['error']) {
+	    console.log('There was an error: ' + authResult['error']);
+	  } else {
+	        $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+	         }
+	      }
+	      
+	  }); }
+	</script>
+
+	</body>
+</html>

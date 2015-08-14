@@ -1,0 +1,195 @@
+html, body
+{
+   margin: 0px;
+   height: 100%;
+}
+
+
+
+.heading{
+	height: 70px;
+	background-color: #001A66;
+	margin: auto;
+}
+
+
+
+.title{
+	width:95%;
+	text-align: left;
+}
+
+
+
+.login{
+	width:5%;
+}
+
+
+
+.logout{
+	width:5%;
+}
+
+
+
+h1{ 
+	color:white;
+	margin-top: 10px;
+}
+
+
+
+#button1{
+	text-align: center;
+	height:32px;
+	width:85px;
+	border-radius: 2px;
+	font-size: 20px;
+	font-family: Georgia;
+	background-color: orange;
+}
+
+
+#button2{
+	width:85px;
+	height:32px;
+	background-color: orange;
+}
+
+
+
+#text{
+	font-size: 20px;
+	font-family: Georgia;
+	color:white;
+}
+
+
+
+h3{
+	color:white;
+}
+
+
+
+.table{
+	width:70%;
+	height: 40%;
+	margin: auto;
+}
+
+
+
+table{
+	width:70%;
+	height: 40%;
+	margin: auto;
+}
+
+
+
+.body{
+	height:100%;
+	background-color: #E1E1D2;
+}
+
+
+
+a{
+	text-decoration: none;
+	font-size: 22px;
+	color:orange;
+}
+
+
+
+.left{
+	width:25%;
+	vertical-align: top;
+}
+
+
+
+.right{
+	width:75%;
+	vertical-align: top;
+}
+
+
+
+.leftMargin{
+	margin-left: 20px;
+}
+
+
+.space{
+	height:20px;
+	background-color: #E1E1D2;
+}
+
+
+
+.caption{
+	font-size: 28px;
+	font-weight: bold;
+	color: #001A66;
+}
+
+
+
+.content{
+	background-color: white;
+}
+
+
+
+#add{
+	color:orange;
+	font-size: 22px;
+}
+
+
+
+#belong{
+	color:grey;
+}
+
+
+
+.leftTop{
+	margin-left: 20px;
+	margin-top: 30px;
+}
+
+
+
+#top{
+	margin-top: 30px;
+}
+
+
+
+.description{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+
+
+.all{
+	vertical-align: top
+}
+
+
+
+.paragraph{
+	font-size: 18px;
+	white-space: pre-wrap;
+}
+
+
+
+form{
+	margin-left: 20px;
+}
