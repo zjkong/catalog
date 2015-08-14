@@ -10,27 +10,17 @@ DBSession = sessionmaker(bind=engine)
 
 session = DBSession()
 
-<<<<<<< HEAD
-# Add new User into database
-=======
 
->>>>>>> origin/master
 User1 = User(name='zhijun kong', email='kxx1309@gmail.com')
 session.add(User1)
 session.commit()
 
-<<<<<<< HEAD
-# Add new sports which user_id is 1
-=======
->>>>>>> origin/master
+
 sports1 = Sports(user_id=1, name='Ping Pong')
 session.add(sports1)
 session.commit()
 
-<<<<<<< HEAD
-# Add new equipment which user_id is 1
-=======
->>>>>>> origin/master
+
 equipment1 = Equipment(user_id=1, name='Paddle', description='''Players are equipped with a laminated wooden racket covered with rubber on one or two sides depending on the grip of the player. The ITTF uses the term "racket", though "bat" is common in Britain, and "paddle" in the U.S. The wooden portion of the racket, often referred to as the "blade", commonly features anywhere between one and seven plies of wood, though cork, glass fiber, carbon fiber, aluminum fiber, and Kevlar are sometimes used. According to the ITTF regulations, at least 85% of the blade by thickness shall be of natural wood. Common wood types include balsa, limba, and cypress or "hinoki," which is popular in Japan. The average size of the blade is about 6.5 inches (17 cm) long and 6 inches (15 cm) wide. Although the official restrictions only focus on the flatness and rigidness of the blade itself, these dimensions are optimal for most play styles.\nTable tennis regulations allow different surfaces on each side of the racket. Various types of surfaces provide various levels of spin or speed, and in some cases they nullify spin. For example, a player may have a rubber that provides much spin on one side of his racket, and one that provides no spin on the other. By flipping the racket in play, different types of returns are possible. To help a player distinguish between the rubber used by his opposing player, international rules specify that one side must be red while the other side must be black. The player has the right to inspect his opponent's racket before a match to see the type of rubber used and what colour it is. Despite high speed play and rapid exchanges, a player can see clearly what side of the racket was used to hit the ball. Current rules state that, unless damaged in play, the racket cannot be exchanged for another racket at any time during a match.''', sports=sports1)
 
 session.add(equipment1)
