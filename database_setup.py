@@ -31,10 +31,6 @@ class Sports(Base):
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
-<<<<<<< HEAD
-    # Serialize the object into json format
-=======
->>>>>>> origin/master
     @property
     def serialize(self):
         """
