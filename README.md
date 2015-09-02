@@ -1,6 +1,8 @@
 SET UP
 
 1 You need to install vagrant, virtualBox and git. you can download both of them from here:https://www.udacity.com/wiki/ud197/install-vagrant
+(Strongly recommand to install virtual box 4.3.xx because other version may not be compatible with vagrant and cause 
+varies kind of problems)
 
 2 Clone the fullstack-nanodegree-vm repository, just type the following in the Git Bash program: git clone http://github.com/udacity/fullstack-nanodegree-vm fullstack Then in the file github, you can find that a file called fullstack is cloned for you.
 
